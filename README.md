@@ -2,6 +2,8 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-qze54d)
 
+> comparison of object always checks reference not value
+
 ```
 const x = {val1: 10}
 console.log(x) // {val1: 10}
