@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
-const LocalStorage = () => {
+const LocalStorageValue = () => {
   const [counter, setCounter] = useState(0);
 
-  const onIncrementHandler = () => {};
-  const onSaveLocalHandler = () => {};
+  // useEffect(()=>{
+  //   document.LocalStorage.
+  // })
+
+  const onIncrementHandler = () => {
+    setCounter((c) => c + 1);
+  };
+  const onSaveLocalHandler = () => {
+    localStorage.setItem('myCounterValue', counter)
+  };
   return (
     <>
       <p>Load number : {counter}</p>
@@ -12,4 +20,4 @@ const LocalStorage = () => {
     </>
   );
 };
-export default LocalStorage;
+export default LocalStorageValue;
