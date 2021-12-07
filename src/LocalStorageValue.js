@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react';
 const LocalStorageValue = () => {
   const [counter, setCounter] = useState(0);
 
-  // useEffect(()=>{
-  //   document.LocalStorage.
-  // })
+  useEffect(() => {
+    const intLocStorVal = localStorage.getItem('myCounterValue');
+    if (intLocStorVal != null) {
+      setCounter(() => parseInt(intLocStorVal, 10));
+    }
+  }, []);
 
   const onIncrementHandler = () => {
     setCounter((c) => c + 1);
   };
   const onSaveLocalHandler = () => {
-    localStorage.setItem('myCounterValue', counter)
+    localStorage.setItem('myCounterValue', counter);
   };
   return (
     <>
