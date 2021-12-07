@@ -23,7 +23,6 @@ x === z
 false
 ```
 
-
 # react-hooks
 
 # React hooks
@@ -43,11 +42,10 @@ false
 - when state change the component that own the state will be re-rendered as well as ite entire child components tree, any component that is a part of the parent component gets re-render
 - Important: the inline functions get executed before the view is returned, it may block the rendering of component
 - rendering the components should be block by using use useEffect, it is the better way
+
 ## useEffect
+
 - React runs useEffect Hook asynchronously after the view has been rendered
 - the 'return' function in useEffect is a clean up function
 - clean up function is trigger once when the component unmounted
 - clean up function is trigger everytime when the dependency change
-
-
-
